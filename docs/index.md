@@ -52,6 +52,7 @@ DRIVER={ODBC Driver 17 for SQL Server};SERVER=host_name,port;DATABASE=db_name;UI
 ```
 
 ```py
+import pyodbc
 __connection_str = f'DRIVER={{{self.DRIVER}}};SERVER={self.SERVER},{self.PORT};DATABASE={self.DATABASE};UID={self.UID};PWD={self.PWD}'
 cnxn = pyodbc.connect(__connection_str)
 cursor = cnxn.cursor()
